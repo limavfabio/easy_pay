@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
 
-  validates_presence_of :email, :password, :password_confirmation
+  validates_presence_of :email, :password
   validates_uniqueness_of :email
   validates_confirmation_of :password
   validates_length_of :password, minimum: 6, maximum: 20
