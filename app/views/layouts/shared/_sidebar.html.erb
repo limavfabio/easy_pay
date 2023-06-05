@@ -1,0 +1,21 @@
+<div
+  x-show="open"
+  x-transition:enter="transition duration-500 transform"
+  x-transition:enter-start="translate-x-full"
+  x-transition:enter-end="translate-x-0"
+  x-transition:leave="transition duration-500 transform"
+  x-transition:leave-start=" translate-x-0"
+  x-transition:leave-end=" translate-x-full"
+  class="fixed top-0 right-0 w-3/4 h-screen bg-main"
+>
+  <!-- Your side panel content goes here -->
+  <div class="flex flex-col gap-3 ml-2 mt-10 text-white">
+    <%= link_to "Home", root_path, class: "mr-5 font-medium hover:text-gray-900" %>
+    <%= link_to "Groups", groups_path, class: "mr-5 font-medium hover:text-gray-900" %>
+    <%= link_to "Payments", groups_path, class: "mr-5 font-medium hover:text-gray-900" %>
+    <%= button_to "Logout",
+    destroy_user_session_path,
+    method: :delete,
+    class: "mr-5 font-medium hover:text-gray-900" %>
+  </div>
+</div>
