@@ -62,6 +62,8 @@ group :development do
   gem "web-console"
   gem 'bullet'
   gem 'letter_opener'
+  gem 'sorbet'
+  gem 'tapioca', require: false
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
@@ -84,3 +86,5 @@ gem 'devise'
 gem 'tailwindcss-rails'
 
 gem 'erb-formatter'
+
+gem 'sorbet-runtime'
