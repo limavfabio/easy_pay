@@ -3,7 +3,7 @@
   <head>
     <title>EasyPay</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <script src="//unpkg.com/alpinejs"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
@@ -12,10 +12,10 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class='bg-gray-100'>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= render "layouts/shared/header" %>
+    <%= render "layouts/shared/header", locals: { header_title: @header_title } %>
     <%= yield %>
   </body>
 </html>

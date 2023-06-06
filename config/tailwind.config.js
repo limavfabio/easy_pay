@@ -10,7 +10,8 @@ module.exports = {
   theme: {
     extend: {
       textColor: {
-        default: "#434b54",
+        default: "#fec901",
+        // default: "#434b54",
       },
       colors: {
         main: "#3778c2",
