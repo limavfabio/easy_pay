@@ -1,17 +1,12 @@
-<div id="<%= dom_id group %>">
-  <p>
-    <strong>Name:</strong>
-    <%= group.name %>
-  </p>
+<div id="<%= dom_id group %>", class='flex bg-white p-2'>
+  <%= image_tag("icons/archive_box.svg", class: "h-16", alt: "Archive Box Icon") %>
+  <div class='flex flex-col justify-between ml-2'>
+    <div class='flex'>
+      <p><%= group.name %></p>
+      <p class='text-gray-900 font-bold'>Total Value</p>
 
-  <p>
-    <strong>Icon:</strong>
-    <%= group.icon %>
-  </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= group.user_id %>
-  </p>
+    </div>
+    <p><%= group.created_at %></p>
+  </div>
 
 </div>

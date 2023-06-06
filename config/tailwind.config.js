@@ -16,6 +16,7 @@ module.exports = {
       colors: {
         main: "#3778c2",
         secondary: "#5gb523",
+        textColor: "#434b54",
       },
       fontFamily: {
         headline: ["Proxima Nova Bold", "sans-serif"],

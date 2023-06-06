@@ -1,14 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
-<h1 class="">Groups</h1>
+<% content_for :header_title, "Groups" %>
 
-<div id="groups">
+<div id="groups" class='flex flex-col gap-3 m-3'>
   <% @groups.each do |group| %>
     <%= render group %>
-    <p>
-      <%= link_to "Show this group", group %>
-    </p>
   <% end %>
 </div>
 
-<%= link_to "New group", new_group_path %>
+<div class='bg-green-600 p-3 fixed w-full bottom-0'>
+  <div class='border p-3 border-white text-center sticky'><%= link_to "New Group", new_group_path, class: "text-white" %></div>
+</div>
