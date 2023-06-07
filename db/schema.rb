@@ -23,11 +23,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_05_172342) do
     t.index ["user_id"], name: "index_groups_on_user_id"
   end
 
-  create_table "groups_payments", id: false, force: :cascade do |t|
+  create_table "groups_payments", force: :cascade do |t|
     t.bigint "payment_id", null: false
     t.bigint "group_id", null: false
-    t.index ["group_id", "payment_id"], name: "index_groups_payments_on_group_id_and_payment_id"
-    t.index ["payment_id", "group_id"], name: "index_groups_payments_on_payment_id_and_group_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["group_id", "payment_id"], name: "index_groups_payments_on_group_id_and_payment_id", unique: true
+    t.index ["group_id"], name: "index_groups_payments_on_group_id"
+    t.index ["payment_id", "group_id"], name: "index_groups_payments_on_payment_id_and_group_id", unique: true
+    t.index ["payment_id"], name: "index_groups_payments_on_payment_id"
   end
 
   create_table "payments", force: :cascade do |t|
@@ -57,5 +61,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_05_172342) do
   end
 
   add_foreign_key "groups", "users"
+  add_foreign_key "groups_payments", "groups"
+  add_foreign_key "groups_payments", "payments"
   add_foreign_key "payments", "users", column: "author_id"
 end
