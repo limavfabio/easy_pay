@@ -11,4 +11,10 @@
     <p><%= payment.created_at %></p>
   </div>
 
+  <div>
+    <% payment.groups.each do |group| %>
+      <p><%= group.name %></p>
+    <% end %>
+  </div>
+
 </div>
