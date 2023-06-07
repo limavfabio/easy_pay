@@ -1,14 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Payments</h1>
+<% content_for :header_title, "Payments" %>
 
-<div id="payments">
+<div id="payments" class='flex flex-col gap-3 m-3'>
   <% @payments.each do |payment| %>
     <%= render payment %>
-    <p>
-      <%= link_to "Show this payment", payment %>
-    </p>
   <% end %>
 </div>
 
-<%= link_to "New payment", new_payment_path %>
+<div class='bg-green-600 p-3 fixed w-full bottom-0'>
+  <div class='border p-3 border-white text-center sticky'><%= link_to "New payment", new_payment_path, class: "text-white" %></div>
+</div>
