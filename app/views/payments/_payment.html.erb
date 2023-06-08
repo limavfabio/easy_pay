@@ -1,20 +1,31 @@
-<div id="<%= dom_id payment %>, class='flex bg-white p-2'">
+<div class='bg-white p-3 m-3 divide-y-2'>
 
-  <%= image_tag("icons/archive_box.svg", class: "h-16", alt: "Archive Box Icon") %>
-
-  <div class='flex flex-col justify-between ml-2'>
-    <div class='flex'>
-      <p><%= payment.name %></p>
-      <p class='text-gray-900 font-bold'>Total Value</p>
-
-    </div>
-    <p><%= payment.created_at %></p>
+  <div class='flex items-center pb-3'>
+    <%= image_tag("icons/archive_box.svg", class: "h-16", alt: "Archive Box Icon") %>
+    <h2 class='ml-2 font-bold'><%= payment.name %></h2>
   </div>
 
-  <div>
+  <div class="py-3">
+    <p class="font-bold">Transaction Nº
+      <%= payment.id %>
+    </p>
+    <div class='flex items-center my-2 text-gray-500'>
+      <%= image_tag("icons/calendar_mini.svg", class: "h-10", alt: "Calendar Icon") %>
+      <p><%= payment.created_at %></p>
+    </div>
+  </div>
+
+  <div class='flex justify-between font-bold pt-3'>
+    <p>TOTAL PAYMENT</p>
+    <p>$<%= payment.amount %></p>
+  </div>
+</div>
+
+<div class="bg-white p-3 m-3">
+  <h1 class="font-bold pb-2">GROUPS</h1>
+  <div class="divide-y-2">
     <% payment.groups.each do |group| %>
-      <p><%= group.name %></p>
+      <p class="py-2"><%= group.name %></p>
     <% end %>
   </div>
-
 </div>
