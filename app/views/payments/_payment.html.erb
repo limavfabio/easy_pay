@@ -25,7 +25,7 @@
   <h1 class="font-bold pb-2">GROUPS</h1>
   <div class="divide-y-2">
     <% payment.groups.each do |group| %>
-      <p class="py-2"><%= group.name %></p>
+      <%= link_to group.name, group, class: "py-2 hover:underline" %>
     <% end %>
   </div>
 </div>
