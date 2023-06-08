@@ -1,0 +1,25 @@
+<div class='bg-white p-2 m-3 text-center'>
+  <p class='font-bold'>Total Amount: $<%= @total_amount %></p>
+</div>
+
+<div id="payments" class='flex flex-col gap-3 m-3'>
+  <% @payments.each do |payment| %>
+    <%= render "payments/payment_card", payment: payment %>
+  <% end %>
+</div>
+
+<div
+  class='
+    fixed
+    w-full
+    bottom-0
+    bg-gray-500
+    p-3
+    font-bold
+    flex
+    justify-center
+    text-white
+  '
+>
+  <%= link_to "Back to groups", groups_path %>
+</div>

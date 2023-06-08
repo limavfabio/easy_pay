@@ -1,7 +1,8 @@
 <div class='flex bg-white p-2'>
   <%= image_tag("icons/archive_box.svg", class: "h-16", alt: "Archive Box Icon") %>
   <div class='flex flex-col justify-center ml-2'>
-    <p class='font-bold ml-2'><%= group.name %></p>
+    <%= link_to group.name, group, class: "font-bold ml-2" %>
+
   </div>
 
 </div>

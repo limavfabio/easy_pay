@@ -6,7 +6,10 @@ class GroupsController < ApplicationController
     @groups = current_user.groups
   end
 
-  def show; end
+  def show
+    @payments = @group.payments
+    @total_amount = @payments.sum(:amount)
+  end
 
   def new
     @group = Group.new

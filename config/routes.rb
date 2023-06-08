@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   get 'splash/index'
   devise_for :users
   resources :payments
-  resources :groups, except: [:show]
-  resources :users
+  resources :groups
+  resources :users, except: %i[show index edit update destroy]
 
-  root to: 'groups#index'
+  root to: 'payments#index'
 end
