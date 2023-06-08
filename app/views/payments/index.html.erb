@@ -4,7 +4,7 @@
 
 <div id="payments" class='flex flex-col gap-3 m-3'>
   <% @payments.each do |payment| %>
-    <%= render payment %>
+    <%= render "payment_card", payment: payment %>
   <% end %>
 </div>
 
