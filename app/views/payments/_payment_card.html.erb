@@ -6,9 +6,9 @@
   ),
   payment %>
   <div class='flex flex-col justify-between ml-2'>
-    <div class="flex justify-between">
+    <div class="flex flex-col">
       <%= link_to payment.name, payment %>
-      <p class='font-bold ml-3'>$<%= payment.amount %></p>
+      <p class='font-bold'>$<%= payment.amount %></p>
     </div>
     <p class='text-sm'><%= payment.created_at %></p>
   </div>

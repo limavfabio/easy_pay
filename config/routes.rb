@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :groups
   resources :users, except: %i[show index edit update destroy]
 
-  root to: 'payments#index'
+  root to: 'groups#index'
 end

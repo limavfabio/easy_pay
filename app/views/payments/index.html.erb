@@ -1,7 +1,7 @@
 <% content_for :header_title, "Payments" %>
 
 <div id="payments" class='flex flex-col gap-3 m-3'>
-  <% @payments.each do |payment| %>
+  <% @payments.order(created_at: :desc).each do |payment| %>
     <%= render "payment_card", payment: payment %>
   <% end %>
 </div>
