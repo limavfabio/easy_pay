@@ -28,7 +28,12 @@
     </div>
 
     <div>
-      <%= form.collection_select :group_ids, Group.all, :id, :name, {}, { multiple: true } %>
+      <%= form.collection_select :group_ids,
+                             Group.all,
+                             :id,
+                             :name,
+                             { selected: selected_group&.id },
+                             { multiple: true } %>
     </div>
 
     <div class='mx-auto text-gray-500 mt-4 mb-2 hover:cursor-pointer'>

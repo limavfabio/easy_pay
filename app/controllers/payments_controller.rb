@@ -10,6 +10,7 @@ class PaymentsController < ApplicationController
   def show; end
 
   def new
+    @selected_group = Group.find(params[:group_id]) if params[:group_id]
     @payment = Payment.new
   end
 
