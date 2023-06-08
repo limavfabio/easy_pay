@@ -13,9 +13,9 @@
   </head>
 
   <body class='bg-gray-100 text-textColor'>
+    <%= render "layouts/shared/header", locals: { header_title: @header_title } %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= render "layouts/shared/header", locals: { header_title: @header_title } %>
     <%= yield %>
   </body>
 </html>

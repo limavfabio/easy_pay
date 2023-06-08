@@ -1,9 +1,10 @@
 class PaymentsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_payment, only: %i[show edit update destroy]
+  before_action :check_group_presence, only: %i[new create]
 
   def index
-    @payments = current_user.payments
+    @payments = current_user.payments if current_user
   end
 
   def show; end
@@ -60,5 +61,13 @@ class PaymentsController < ApplicationController
   # Only allow a list of trusted parameters through.
   def payment_params
     params.require(:payment).permit(:name, :amount, :author_id, group_ids: [])
+  end
+
+  # Check if the user has at least one group when creating a payment
+  def check_group_presence
+    unless current_user.groups.exists?
+      flash[:alert] = "You must create at least one group before creating a payment."
+      redirect_to new_group_path
+    end
   end
 end
