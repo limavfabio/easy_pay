@@ -1,10 +1,22 @@
-<h1>Editing payment</h1>
+<% content_for :header_title, "Edit Payment" %>
 
-<%= render "form", payment: @payment %>
+<%= render "form", payment: @payment, selected_group: @selected_group %>
 
-<br>
+<div
+  class='
+    fixed
+    w-full
+    bottom-0
+    bg-gray-500
+    p-3
+    font-bold
+    flex
+    justify-around
+    text-white
+  '
+>
+  <%= link_to "Show this payment", @payment, class: "hover:underline" %>
+  |
+  <%= link_to "Back to payments", payments_path, class: "hover:underline" %>
 
-<div>
-  <%= link_to "Show this payment", @payment %> |
-  <%= link_to "Back to payments", payments_path %>
 </div>

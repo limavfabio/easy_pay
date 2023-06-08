@@ -1,5 +1,3 @@
-<p style="color: green"><%= notice %></p>
-
 <%= render @payment %>
 
 <div
@@ -30,7 +28,8 @@
     text-white
   '
 >
-  <%= link_to "Edit this payment", edit_payment_path(@payment) %>
+  <%= link_to "Edit this payment",
+  edit_payment_path(@payment, group_id: @payment.group_ids.first) %>
   |
   <%= link_to "Back to payments", payments_path %>
 

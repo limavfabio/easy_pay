@@ -14,7 +14,9 @@ class PaymentsController < ApplicationController
     @payment = Payment.new
   end
 
-  def edit; end
+  def edit
+    @selected_group = Group.find(params[:group_id]) if params[:group_id]
+  end
 
   def create
     @payment = Payment.new(payment_params)

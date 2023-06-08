@@ -13,6 +13,7 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
+    @groups = current_user.groups
   end
 
   def edit; end

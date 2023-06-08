@@ -29,7 +29,7 @@
 
     <div>
       <%= form.collection_select :group_ids,
-                             Group.all,
+                             current_user.groups,
                              :id,
                              :name,
                              { selected: selected_group&.id },
