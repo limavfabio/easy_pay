@@ -25,9 +25,12 @@
                   options_for_select(
                     Dir
                       .glob("app/assets/images/icons/*")
-                      .map { |path| [File.basename(path), path] }
+                      .map do |path|
+                        [File.basename(path, ".*"), "icons/#{File.basename(path)}"]
+                      end
                   ),
                   prompt: "Select an icon" %>
+
     </div>
 
     <div class='mx-auto text-gray-500 mt-4 mb-2 hover:cursor-pointer'>
