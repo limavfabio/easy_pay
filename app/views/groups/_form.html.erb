@@ -20,11 +20,19 @@
                         "w-full focus:ring-0 focus:outli border-l-0 border-r-0 border-gray-300 focus:outline-none placeholder-gray-400" %>
     </div>
 
+    <div class='mt-2'>
+      <%= form.select :icon,
+                  options_for_select(
+                    Dir
+                      .glob("app/assets/images/icons/*")
+                      .map { |path| [File.basename(path), path] }
+                  ),
+                  prompt: "Select an icon" %>
+    </div>
+
     <div class='mx-auto text-gray-500 mt-4 mb-2 hover:cursor-pointer'>
       <%= form.submit %>
     </div>
   </div>
-
-  <%= form.hidden_field :icon, value: "/icons/archive_box" %>
 
 <% end %>
