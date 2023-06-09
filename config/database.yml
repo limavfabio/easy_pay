@@ -6,6 +6,8 @@ default: &default
 development:
   <<: *default
   database: easy_pay
+  username: limavfabio
+  password: <%= ENV["EASY_PAY_DATABASE_PASSWORD"] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -13,6 +15,8 @@ development:
 test:
   <<: *default
   database: easy_pay_test
+  username: limavfabio
+  password: <%= ENV["EASY_PAY_DATABASE_PASSWORD"] %>
 
 production:
   <<: *default

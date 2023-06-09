@@ -68,9 +68,9 @@ class PaymentsController < ApplicationController
 
   # Check if the user has at least one group when creating a payment
   def check_group_presence
-    unless current_user.groups.exists?
-      flash[:alert] = "You must create at least one group before creating a payment."
-      redirect_to new_group_path
-    end
+    return if current_user.groups.exists?
+
+    flash[:alert] = 'You must create at least one group before creating a payment.'
+    redirect_to new_group_path
   end
 end
