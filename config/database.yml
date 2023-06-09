@@ -20,6 +20,7 @@ test:
 
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: easy_pay_production
   username: easy_pay
   password: <%= ENV["EASY_PAY_DATABASE_PASSWORD"] %>
