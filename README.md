@@ -27,7 +27,8 @@
     - [Setup](#setup)
     - [Install](#install)
     - [Usage](#usage)
-  - [👥 Authors ](#-authors-)
+  - [👥 Authors ](#authors)
+  - [🔭 Future Features](#future-features)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
   - [🙏 Acknowledgments ](#-acknowledgments-)
@@ -121,6 +122,14 @@ To run the project, execute the following command:
 - LinkedIn: [limavfabio](https://www.linkedin.com/in/limavfabio/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **[Edit you account details]**
+- [ ] **[Website wide search]**
+- [ ] **[More options to organize and manage your payments]**
 
 <!-- CONTRIBUTING -->
 
