@@ -12,22 +12,9 @@
   <% end %>
 </div>
 
-<div class='flex justify-center'><%= link_to "New payment for this group",
-  new_payment_path(group_id: @group.id),
-  class: "hover:underline" %></div>
-
-<div
-  class='
-    fixed
-    w-full
-    bottom-0
-    bg-gray-500
-    p-3
-    font-bold
-    flex
-    justify-center
-    text-white
-  '
->
-  <%= link_to "Back to groups", groups_path %>
+<div class='bg-green-600 p-3 fixed w-full bottom-0'>
+  <div class='border p-3 border-white text-center sticky'><%= link_to "New payment for this group",
+    new_payment_path(group_id: @group.id),
+    class: "text-white" %>
+  </div>
 </div>
