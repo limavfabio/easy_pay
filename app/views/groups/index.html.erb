@@ -1,0 +1,11 @@
+<% content_for :header_title, "Groups" %>
+
+<div id="groups" class='flex flex-col gap-3 m-3'>
+  <% @groups.each do |group| %>
+    <%= render group %>
+  <% end %>
+</div>
+
+<div class='bg-green-600 p-3 fixed w-full bottom-0'>
+  <div class='border p-3 border-white text-center sticky'><%= link_to "New Group", new_group_path, class: "text-white" %></div>
+</div>

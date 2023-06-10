@@ -1,0 +1,11 @@
+<% content_for :header_title, "Payments" %>
+
+<div id="payments" class='flex flex-col gap-3 m-3'>
+  <% @payments.order(created_at: :desc).each do |payment| %>
+    <%= render "payment_card", payment: payment %>
+  <% end %>
+</div>
+
+<div class='bg-green-600 p-3 fixed w-full bottom-0'>
+  <div class='border p-3 border-white text-center sticky'><%= link_to "New payment", new_payment_path, class: "text-white" %></div>
+</div>

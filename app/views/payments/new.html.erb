@@ -1,0 +1,25 @@
+<% content_for :header_title, "New Payment" %>
+
+<%= render "form", payment: @payment, selected_group: @selected_group %>
+
+<br>
+
+<div class='text-center'>
+  <%= link_to "Back to payments", payments_path %>
+</div>
+<div
+  class='
+    fixed
+    w-full
+    bottom-0
+    bg-gray-500
+    p-3
+    font-bold
+    flex
+    justify-around
+    text-white
+  '
+>
+  <%= link_to "Back to payments", payments_path, class: "" %>
+
+</div>

@@ -1,0 +1,36 @@
+<%= render @payment %>
+
+<div
+  class="
+    bg-red-500
+    text-white
+    m-3
+    p-3
+    rounded-sm
+    font-bold
+    flex
+    justify-center
+  "
+>
+  <%= button_to "Destroy this payment", @payment, method: :delete %>
+</div>
+
+<div
+  class='
+    fixed
+    w-full
+    bottom-0
+    bg-gray-500
+    p-3
+    font-bold
+    flex
+    justify-around
+    text-white
+  '
+>
+  <%= link_to "Edit this payment",
+  edit_payment_path(@payment, group_id: @payment.group_ids.first) %>
+  |
+  <%= link_to "Back to payments", payments_path %>
+
+</div>

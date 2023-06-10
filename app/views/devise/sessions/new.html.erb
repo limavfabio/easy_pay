@@ -1,0 +1,41 @@
+<% content_for :header_title, "LOGIN" %>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <% content_for :header_icon do %>
+    <%= f.submit "Log in" %>
+  <% end %>
+
+  <div class="field pt-3">
+    <%= f.email_field :email,
+                  autofocus: true,
+                  autocomplete: "email",
+                  placeholder: "Email",
+                  class:
+                    "w-full focus:ring-0 focus:outli border-l-0 border-r-0 border-gray-300 focus:outline-none placeholder-gray-400" %>
+  </div>
+  <div class="field pt-2">
+    <%= f.password_field :password,
+                     autocomplete: "current-password",
+                     placeholder: "Password",
+                     class:
+                       "w-full focus:ring-0 focus:outli border-l-0 border-r-0 border-gray-300 focus:outline-none placeholder-gray-400" %>
+  </div>
+
+  <div class='flex flex-col items-center gap-2 pt-4'>
+    <%= link_to "Forgot your password?",
+    new_password_path(resource_name),
+    class: "text-gray-500" %>
+
+    <%= f.submit "Log in", class: "text-gray-500 hover:cursor-pointer" %>
+  </div>
+
+<% end %>
+
+<div class="flex justify-center mt-2">
+  <p class="text-gray-500">Don't have an account?
+  </p>
+  <a href="/users/sign_up" class="text-gray-500 ml-2">
+    Sign up</a>
+</div>

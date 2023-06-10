@@ -1,0 +1,20 @@
+<% content_for :header_title, "New Group" %>
+
+<%= render "form", group: @group %>
+
+<div
+  class='
+    fixed
+    w-full
+    bottom-0
+    bg-gray-500
+    p-3
+    font-bold
+    flex
+    justify-around
+    text-white
+  '
+>
+  <%= link_to "Back to groups", groups_path, class: "" %>
+
+</div>
