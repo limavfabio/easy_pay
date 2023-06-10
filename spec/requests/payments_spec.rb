@@ -23,7 +23,7 @@ RSpec.describe 'Payments', type: :request do
              params: { payment: { name: 'Payment 1', amount: 100, author_id: user.id, group_ids: [group.id] } }
       end.to change(Payment, :count).by(1)
 
-      expect(response).to redirect_to(payment_path(Payment.last))
+      expect(response).to redirect_to(payments_path)
     end
 
     it 'redirects to group creation page if user has no groups' do
