@@ -27,7 +27,8 @@
     - [Setup](#setup)
     - [Install](#install)
     - [Usage](#usage)
-  - [👥 Authors ](#-authors-)
+  - [👥 Authors ](#authors)
+  - [🔭 Future Features](#future-features)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
   - [🙏 Acknowledgments ](#-acknowledgments-)
@@ -122,6 +123,14 @@ To run the project, execute the following command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **[Edit you account details]**
+- [ ] **[Website wide search]**
+- [ ] **[More options to organize and manage your payments]**
+
 <!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
@@ -168,6 +177,6 @@ If you like this project feel free to fork it and use it as you need and don't f
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./license) licensed
+This project is [MIT](./LICENSE) licensed
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
