@@ -5,7 +5,6 @@ RSpec.describe 'Payments', type: :request do
   let(:group) { Group.create(name: 'Group A', icon: 'icon', user:) }
 
   before do
-    user.confirm
     sign_in user
   end
 

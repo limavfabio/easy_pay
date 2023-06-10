@@ -4,7 +4,6 @@ RSpec.describe 'Groups', type: :request do
   let(:user) { User.create(name: 'John Doe', email: 'john@example.com', password: 'password') }
 
   before do
-    user.confirm
     sign_in user
   end
 

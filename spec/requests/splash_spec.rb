@@ -5,7 +5,6 @@ describe 'GET /' do
 
   context 'when user is logged in' do
     it 'renders groups index page' do
-      user.confirm
       sign_in user
 
       get root_path
