@@ -20,7 +20,7 @@ RSpec.describe 'Groups', type: :request do
     it 'creates a new group' do
       group_params = {
         name: 'Group A',
-        icon: 'icon'
+        icon: 'icons/archive_box.svg'
       }
 
       expect do
@@ -36,7 +36,7 @@ RSpec.describe 'Groups', type: :request do
 
       group = Group.last
       expect(group.name).to eq('Group A')
-      expect(group.icon).to eq('icon')
+      expect(group.icon).to eq('icons/archive_box.svg')
       expect(group.user).to eq(user)
     end
   end
