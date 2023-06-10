@@ -1,10 +1,16 @@
 require 'rails_helper'
 
-RSpec.describe 'Splashes', type: :request do
-  describe 'GET /index' do
-    it 'returns http success' do
-      get '/splash/index'
-      expect(response).to have_http_status(:success)
+describe 'GET /' do
+  let(:user) { User.create(name: 'John Doe', email: 'john@example.com', password: 'password') }
+
+  context 'when user is logged in' do
+    it 'renders groups index page' do
+      user.confirm
+      sign_in user
+
+      get root_path
+
+      expect(response).to render_template('groups/index')
     end
   end
 end
