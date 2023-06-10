@@ -168,6 +168,6 @@ If you like this project feel free to fork it and use it as you need and don't f
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./license) licensed
+This project is [MIT](./LICENSE) licensed
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
